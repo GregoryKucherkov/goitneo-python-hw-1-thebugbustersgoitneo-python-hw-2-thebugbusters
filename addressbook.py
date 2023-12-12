@@ -80,27 +80,28 @@ class AddressBook(UserDict):
             return f"Contact {name} wasn't found in the address book."
         
 
-        # Створення нової адресної книги
-book = AddressBook()
+# Creating a new address book        
+book = AddressBook() 
 
-    # Створення запису для John
+# Creating John record
 john_record = Record("John")
 john_record.add_phone("1234567890")
 john_record.add_phone("5555555555")
 
-    # Додавання запису John до адресної книги
+# Adding John record to the Address book
 book.add_record(john_record)
 
-    # Створення та додавання нового запису для Jane
+# Creating and adding a new Jane record 
 jane_record = Record("Jane")
 jane_record.add_phone("9876543210")
 book.add_record(jane_record)
 
-    # Виведення всіх записів у книзі
+# Printing out all the data in the Address book 
 for name, record in book.data.items():
     print(record)
 
-print(john_record)  # Виведення: Contact name: John, phones: 1112223333; 5555555555
+# Printing out Contact name: John, phones: 1112223333; 5555555555
+print(john_record)  
 
 john_record.edit_phone("1234567890", "1112223333")
 print(john_record)
